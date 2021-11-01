@@ -5,8 +5,10 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   testMatch: ['**/**/*.spec.ts'],
+  moduleDirectories: ['node_modules', '<rootDir>'],
   moduleNameMapper: {
-    '^@shared/(.*)$': '<rootDir>/src/shared/$1',
-    '^@modules/(.*)$': '<rootDir>/src/modules/$1',
+    '@/(.*)': '<rootDir>/src/$1',
+    '@shared/(.*)$': '<rootDir>/src/shared/$1',
+    '@modules/(.*)$': '<rootDir>/src/modules/$1',
   },
 };
